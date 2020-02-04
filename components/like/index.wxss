@@ -1,0 +1,15 @@
+/* components/like/index.wxss */
+.container{
+    max-width: 80rpx;
+    display: inline-flex;
+    padding-top: 8rpx;
+}
+.container .like-img{
+    width: 38rpx;
+    height: 38rpx;
+}
+.count{
+    color: #c9c9c9;
+    position: relative;
+    bottom: 14rpx;
+}

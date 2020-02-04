@@ -1,0 +1,13 @@
+<!--components/episode/index.wxml-->
+<wxs src="../../utils/filters.wxs" module="filter"></wxs>
+<view class="container">
+    <view class="col-num">
+        <text class="col-1">NO.</text>
+        <text class="col-2">{{filter.completion(index)}}</text>
+    </view>
+    <text class="col-line"></text>
+    <view class="col-date">
+        <text class="date-row">{{month}}</text>
+        <text class="date-row">{{year}}</text>
+    </view>
+</view>

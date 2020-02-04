@@ -1,0 +1,29 @@
+/* components/episode/index.wxss */
+.container{
+    display: flex;
+    
+}
+.col-num{
+    display: flex;
+    align-items: baseline;
+}
+.col-1{
+    font-size: 30rpx;
+}
+.col-2{
+    font-size: 44rpx;
+    line-height: 1em;
+}
+.col-line{
+    
+    border-left: 1px solid #000;
+    margin: 0 6rpx;
+    height: 40rpx;
+    
+}
+.col-date{
+    display: flex;
+    flex-direction: column;
+    margin-top: -8rpx;
+    font-size: 20rpx;
+}

@@ -1,0 +1,7 @@
+var completion = function(num) {
+  return num > 10 ? num : '0' + num
+}
+
+module.exports = {
+  completion: completion
+}

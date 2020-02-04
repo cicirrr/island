@@ -1,0 +1,19 @@
+/* components/classic/music/index.wxss */
+@import '../classic_pub.wxss';
+.container{
+  position: relative;
+}
+.container .img-bg{
+  width: 500rpx;
+  height: 500rpx;
+  margin: 40rpx auto 0;
+  border-radius: 50%;
+}
+.icon{
+  width: 120rpx;
+  height: 120rpx;
+  position: absolute;
+  top: 290rpx;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}

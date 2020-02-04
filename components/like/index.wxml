@@ -1,0 +1,5 @@
+<!--components/like/index.wxml-->
+<view class="container" bindtap="onToggleLike">
+    <image class="like-img" src="{{likeStatus? likeUrl : unlikeUrl}}"></image>
+    <text class="count">{{likeCount}}</text>
+</view>

@@ -1,0 +1,13 @@
+/* pages/classic/classic.wxss */
+
+.classic-header{
+  display: flex;
+  padding: 24rpx;
+  justify-content: space-between;
+}
+.footer{
+  position: absolute;
+  left: 50%;
+  bottom: 100rpx;
+  transform: translateX(-50%);
+}

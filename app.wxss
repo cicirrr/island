@@ -1,0 +1,13 @@
+/**app.wxss**/
+
+page{
+  font-size: 24rpx;
+  font-family: PingFangSC-Thin, sans-serif;
+}
+/* navigationBarBorder-top */
+.border-top{
+  border-top: 1px solid #eaeaea;
+}
+.border-bottom{
+  border-bottom: 1px solid #eaeaea;
+}

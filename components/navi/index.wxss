@@ -1,0 +1,17 @@
+/* components/navi/index.wxss */
+.container{
+  display: flex;
+  width: 590rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #f5f5f5;
+}
+.icon{
+  width: 30px;
+  height: 40px;
+}
+.title{
+  font-size: 30rpx;
+  flex: 1;
+  text-align: center;
+}
