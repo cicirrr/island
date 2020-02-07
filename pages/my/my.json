@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "v-slot": "/components/image-button/index",
+    "v-preview": "/components/classic-preview/index"
+    
+  }
+}

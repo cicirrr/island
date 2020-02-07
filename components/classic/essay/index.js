@@ -8,7 +8,7 @@ Component({
    */
   behaviors: [classicBeh],
   properties: {
-
+    hidden: Boolean
   },
 
   /**

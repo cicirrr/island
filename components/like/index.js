@@ -5,7 +5,8 @@ Component({
    */
   properties: {
     likeCount: Number,
-    likeStatus: Boolean
+    likeStatus: Boolean,
+    showing: Boolean
   },
 
   /**

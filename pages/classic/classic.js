@@ -7,8 +7,12 @@ import {
 const classicModule = new ClassicModule()
 const likeModule = new LikeModule()
 // pages/classic/classic.js
-Page({
-
+Component({
+  
+  properties:{
+    cid:Number,
+    ctype: Number
+  },
   /**
    * 页面的初始数据
    */
@@ -23,12 +27,32 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    this.getClassicLatest();
-
+  attached(options) {
+    
+    const cid = this.properties.cid
+    const ctype = this.properties.ctype
+    if(!cid){
+      this.getClassicLatest();
+    }else{
+      this.getDetailClassic(cid,ctype)
+    }
+    
+    
   },
-  getClassicLatest() {
-    classicModule.getClassicLatest().then(res => {
+  methods: {
+    getClassicLatest() {
+    
+      classicModule.getClassicLatest().then(res => {
+        this.setData({
+          classic: res
+        })
+        this._updateLike(res)
+      })
+    
+    
+  },
+  getDetailClassic(id,type){
+    classicModule.getClassicPage(id,type).then(res => {
       this.setData({
         classic: res
       })
@@ -42,7 +66,9 @@ Page({
     this._postLike(likeStatus)
   },
   nextOrPrevious(event) {
+
     const step = event.detail
+  
     const index = this.data.classic.index
     classicModule.goPreviousOrNext(index, step).then(res => {
       this.setData({
@@ -71,53 +97,8 @@ Page({
     const type = this.data.classic.type
     likeModule.postLike(likeStatus, id, type)
     
-  },
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
   }
+  }
+  
+ 
 })

@@ -1,0 +1,34 @@
+<!--pages/my/my.wxml-->
+<!-- <wxs src="../../utils/filters.wxs" moudle="filter"></wxs> -->
+<view class="my-container">
+<view class="my-header">
+  <image class="my-bg" src="/images/my/my@bg.png"/>
+  <v-slot class="avatar-info" open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" wx:if="{{!authorized}}">
+    <image class="avatar" slot="img" src="/images/my/my.png"></image>
+    
+  </v-slot>
+  <view wx:if="{{authorized}}" class="avatar-info">
+  <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+  <text class="name">{{userInfo.nickName}}</text>
+</view>
+
+  <view class="my-info">
+    <view class="about">
+      <image class="icon-my" src="/images/my/about.png"></image>
+      <text class="txt">关于我们</text>
+    </view>
+    <view class="about">
+      <text class="num">{{count}}</text>
+      <text class="txt">我的书单</text>
+    </view>
+  </view>
+</view>
+<view class="my-sub">
+  <image class="my-like" src="/images/my/like.png"/>
+  <view class="like-box">
+    <block wx:for="{{favorClassic}}" wx:key="index">
+    <v-preview favor="{{item}}" class="preview" bind:detail="goDetail"></v-preview>
+  </block>
+  </view>
+</view>
+</view>

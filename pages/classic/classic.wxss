@@ -4,10 +4,27 @@
   display: flex;
   padding: 24rpx;
   justify-content: space-between;
+  align-items: center;
 }
 .footer{
   position: absolute;
   left: 50%;
   bottom: 100rpx;
   transform: translateX(-50%);
+}
+.like{
+  margin-right: 20rpx
+}
+.like-share{
+  display: flex;
+}
+.share-btn{
+  /* margin-left: -150rpx; */
+  width: 40rpx;
+  height: 42rpx;
+}
+
+.icon-share{
+  width: 40rpx;
+  height: 40rpx;
 }

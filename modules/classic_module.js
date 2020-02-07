@@ -33,6 +33,11 @@ class ClassicModule extends HTTP {
   isFirst(index){
     return index == 1 ? true:false
   }
+  getClassicPage(id,type){
+    return this.request({
+      url: `/classic/${type}/${id}`
+    })
+  }
   _setLatestIndex(index){
     wx.setStorageSync('latest', index)
   }

@@ -4,10 +4,19 @@ page{
   font-size: 24rpx;
   font-family: PingFangSC-Thin, sans-serif;
 }
+button{
+  padding: 0;
+  margin: 0;
+}
 /* navigationBarBorder-top */
 .border-top{
   border-top: 1px solid #eaeaea;
 }
 .border-bottom{
   border-bottom: 1px solid #eaeaea;
+}
+.text-ellipsis{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

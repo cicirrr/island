@@ -8,11 +8,9 @@ Component({
    */
   behaviors: [classicBeh],
   properties: {
-
+    
   },
-  attached(){
-    console.log(this.data.img)
-  },
+  
   /**
    * 组件的初始数据
    */

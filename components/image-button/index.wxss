@@ -1,0 +1,10 @@
+/* components/image-button/index.wxss */
+.container{
+  /* padding: 0;
+  border: none; */
+  padding: 0 !important;
+    border:none !important;
+}
+.container::after {
+  border : none ;
+  }

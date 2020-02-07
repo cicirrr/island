@@ -1,0 +1,161 @@
+/* pages/book-detail/book-detail.wxss */
+.detail-container{
+  background-color: #f2f2f2;
+  padding-bottom: 85rpx;
+}
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40rpx 0;
+  background-color: #fff;
+}
+.header>image{
+  width: 200rpx;
+  height: 300rpx;
+}
+.header .title{
+  font-size: 34rpx;
+  padding: 28rpx 0 16rpx;
+}
+.header .author{
+  color: #888;
+}
+.content{
+  padding: 30rpx 24rpx 24rpx;
+  background-color: #fff;
+  text-align: center;
+  margin-top: 20rpx;
+}
+.content-title{
+  font-size: 32rpx;
+ 
+}
+.content-sub{
+  margin-top: 30rpx;
+}
+.content-sub text{
+  color: #535353;
+}
+.content-sub.tag-wrap{
+  display: flex;
+  flex-wrap: wrap;
+}
+.content-sub .tag{
+  margin-bottom: 20rpx;
+  margin-right: 10rpx;
+}
+.content-sub.book-sum{
+  padding: 0 34rpx;
+  text-align: left;
+  text-indent: 40rpx;
+}
+.content-sub.book-info{
+  padding: 0 24rpx;
+}
+.sub-row{
+  display: flex;
+}
+.sub-row .col-1{
+  width: 18%;
+  text-align: right;
+  margin-right: 24rpx;
+  color: #a2a2a2;
+}
+.detail-footer{
+  height: 84rpx;
+  /* line-height: 84rpx; */
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 -1rpx 5rpx 4rpx rgba(0,0,0,.03);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+.show-box{
+  padding: 14rpx 24rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.input{
+  border: 1px solid #000;
+  border-radius: 30rpx;
+  width: 410rpx;
+  display: flex;
+  /* justify-content: flex-start; */
+  align-items: center;
+}
+.input .icon{
+  width: 26rpx;
+  height: 26rpx;
+  margin: 0 14rpx 0 26rpx
+}
+.hide-box{
+  background-color: #fff;
+  padding: 32rpx 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+}
+.hide-box .row1{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 26rpx 30rpx;
+}
+.hide-box .tip{
+  color: #535353;
+  font-size: 20rpx;
+  padding-left: 20rpx;
+}
+.hide-box .cancel{
+  font-size: 34rpx;
+  color: #878787;
+  border: 1px solid #eee;
+  border-radius: 36rpx;
+  padding: 6rpx 20rpx;
+}
+.input-box{
+  background-color: #f2f2f2;
+  color: #878787;
+  border-radius: 36rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  padding-left: 36rpx;
+  margin: 32rpx 26rpx 0;
+}
+.input-placeholder{
+  color: #878787;
+}
+.blue{
+  background-color: #edf9fe;
+}
+.yellow{
+  background-color: #fbfdd8;
+}
+.row2{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20rpx 32rpx;
+}
+.hide-box .row2 .tag{
+  margin-bottom: 20rpx;
+  margin-right: 10rpx;
+}
+v-tag:nth-child(1)>view{
+  background-color: #edf9fe;
+}
+v-tag:nth-child(2)>view{
+  background-color: #fbfdd8;
+}
+.shadow{
+  display: inline-block;
+  margin: 10rpx auto;
+}
+.tag-nums{
+  color: #adadad;
+  font-size: 18rpx;
+  margin-left: 16rpx;
+}

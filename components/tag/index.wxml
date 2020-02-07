@@ -1,0 +1,7 @@
+<!--components/tag/index.wxml-->
+<view class="container" bind:tap="onPost">
+  <text class="content">{{content}}</text>
+  <slot name="number"></slot>
+  <!-- <text class="nums">+{{nums}}</text> -->
+</view>
+

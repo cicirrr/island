@@ -1,0 +1,73 @@
+/* pages/my/my.wxss */
+.my-container{
+  background-color: #f2f2f2;
+}
+.my-header{
+  position: relative;
+}
+.my-bg{
+  width: 100%;
+  height: 558rpx;
+}
+.avatar-info{
+  position: absolute;
+  left: 302rpx;
+  top: 258rpx;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  
+}
+.name{
+  font-size: 32rpx;
+  display: block;
+  text-align: center;
+}
+.my-info{
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  left: 132rpx;
+  bottom: 60rpx;
+}
+.about{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about:first-child{
+  margin-right: 278rpx;
+}
+.num{
+  font-size: 30rpx;
+}
+.avatar{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.icon-my{
+  width: 40rpx;
+  height: 40rpx;
+}
+.txt{
+  color: #adadad;
+}
+.my-like{
+  width: 100rpx;
+  height: 46rpx;
+}
+.my-sub{
+  text-align: center;
+  padding-top: 30rpx;
+}
+.like-box{
+  padding: 20rpx 28rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.preview{
+  margin-bottom: 28rpx;
+}

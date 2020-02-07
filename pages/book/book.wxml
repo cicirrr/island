@@ -1,0 +1,19 @@
+<!--pages/book/book.wxml-->
+<view class="book-upper" wx:if="{{!searching}}">
+  <view class="book-header" bind:tap="openSearch">
+    <view class="wrapper" >
+      <image class="icon-search" src="/images/icon/search.png"></image>
+    <text>搜索图书名称</text>
+    </view>
+    
+  </view>
+  <view class="book-sub">
+    <image src="/images/book/quality.png"/>
+    <view class="recommend">
+      <block wx:for="{{hotBook}}" wx:key="id">
+        <v-book class="book" book="{{item}}"></v-book>
+      </block>
+    </view>
+  </view>
+</view>
+<v-search wx:if="{{searching}}" bind:cancel="onCancel" bottom="{{loading}}"></v-search>

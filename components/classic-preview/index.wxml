@@ -1,0 +1,10 @@
+<!--components/classic-preview/index.wxml-->
+<wxs src="../../utils/filters.wxs" module="filter"></wxs>
+<view class="container" bind:tap="onDetail">
+  <view class="header">
+    <v-tag class="tag" content="{{types[favor.type]}}"></v-tag>
+    <v-like showing="{{false}}" class="like" like-status="{{favor.like_status}}"></v-like>
+  </view>
+  <image class="img  {{filter.muiscShape(favor.type,'music')}}" src="{{favor.image}}"></image>
+  <text class="content">{{favor.content}}</text>
+</view>

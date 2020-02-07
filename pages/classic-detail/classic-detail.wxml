@@ -1,0 +1,2 @@
+<!--pages/classic-detail/classic-detail.wxml-->
+<v-classic cid="{{cid}}" ctype="{{ctype}}" ></v-classic>

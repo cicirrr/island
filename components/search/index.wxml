@@ -1,0 +1,53 @@
+<!--components/search/index.wxml-->
+<view class="container">
+  <view class="header">
+    <view class="input-box">
+      <input class="input" bind:confirm="onSearch" value="{{q}}" />
+      <image class="icon-search" src="./image/search.png"></image>
+      <image class="icon-cancel" src="./image/cancel.png" bind:tap="closeResult"></image>
+    </view>
+    <text class="cancel" bind:tap="onCancel">取消</text>
+  </view>
+  <view class="sub" wx:if="{{!showing}}">
+    <view class="sub-box history">
+      <view class="sub-title">
+        <text class="line"></text>
+        <text class="title">历史搜索</text>
+      </view>
+
+      <view class="sub-tags">
+        <block wx:for="{{history}}" wx:key="id">
+          <v-tag class="tag" content="{{item}}" bind:post="onSearch"></v-tag>
+        </block>
+      </view>
+      <!-- <view class="sub-tags" wx:if="{{history== false}}">
+        <text>无历史搜索</text> -->
+      <!-- </view> -->
+    </view>
+    <view class="sub-box hot">
+      <view class="sub-title">
+        <text class="line"></text>
+        <text class="title">热门搜索</text>
+      </view>
+      <view class="sub-tags">
+        <block wx:for="{{hot}}" wx:key="id">
+          <v-tag content="{{item}}" class="tag" bind:post="onSearch"></v-tag>
+        </block>
+      </view>
+    </view>
+  </view>
+  <view class="sub-box" >
+    
+    <view class="result" wx:if="{{showing}}">
+      <block wx:for="{{dataArray}}" wx:key="id">
+        <v-preview book="{{item}}" class="book"></v-preview>
+      </block>
+
+    </view>
+    <v-loading class="loading-center" wx:if="{{loadingCenter}}"/>
+
+    <v-loading class="loading" wx:if="{{loading}}"/>
+    <text wx:if="{{noResult}}" class="no-result">没有搜索结果</text>
+  </view>
+
+</view>

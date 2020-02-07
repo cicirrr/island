@@ -1,15 +1,28 @@
 <view class="classic-container">
     <view class="classic-header border-top border-bottom">
         <v-episode index="{{classic.index}}"></v-episode>
-        <v-like likeCount="{{likeCount}}" likeStatus="{{likeStatus}}" bind:toggleLike="onToggleLike">
-        </v-like>
+        
+            <view class="like-share">
+                <v-like likeCount="{{likeCount}}" likeStatus="{{likeStatus}}" bind:toggleLike="onToggleLike" class="like" showing="{{true}}">
+                </v-like>
+                <v-share open-type="share" class="share-btn">
+                    <image class="icon-share" src="/images/icon/share.png" slot="img"></image>
+                </v-share>
+            </view>
+            
+        
 
     </view>
+    <view hidden="{{classic.type != 100}}">
+        <v-movie img="{{classic.image}}" content="{{classic.content}}" />
+    </view>
 
-    <v-movie wx:if="{{classic.type == 100}}" img="{{classic.image}}" content="{{classic.content}}" />
-    <v-music wx:if="{{classic.type == 200}}" img="{{classic.image}}" content="{{classic.content}}" src="{{classic.url}}" />
-    <v-essay wx:if="{{classic.type==300}}" img="{{classic.image}}" content="{{classic.content}}" />
+    <v-music wx:if="{{classic.type == 200}}" img="{{classic.image}}" content="{{classic.content}}" src="{{classic.url}}"
+        title="{{classic.title}}" />
+
+    <v-essay hidden="{{classic.type!=300}}" img="{{classic.image}}" content="{{classic.content}}" />
+
 
     <v-navi class="footer" title="{{classic.title}}" bind:previous="nextOrPrevious" bind:next="nextOrPrevious"
-        latest="{{latest}}" first="{{first}}"></v-navi>
+        latest="{{latest}}" first="{{first}}" wx:if="{{!cid}}"></v-navi>
 </view>

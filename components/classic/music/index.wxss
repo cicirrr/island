@@ -17,3 +17,14 @@
   left: 50%;
   transform: translate(-50%,-50%);
 }
+.rotate{
+  animation: 10s linear 0s infinite rotating;
+}
+@keyframes rotating{
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
