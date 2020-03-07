@@ -13,13 +13,13 @@
 </view>
 
   <view class="my-info">
-    <view class="about">
+    <view class="about"  bindtap="jumpToAbout">
       <image class="icon-my" src="/images/my/about.png"></image>
-      <text class="txt">关于我们</text>
+      <text class="txt">关于我</text>
     </view>
     <view class="about">
       <text class="num">{{count}}</text>
-      <text class="txt">我的书单</text>
+      <text class="txt">喜欢的书</text>
     </view>
   </view>
 </view>

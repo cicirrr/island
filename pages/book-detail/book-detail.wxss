@@ -48,7 +48,7 @@
 .content-sub.book-sum{
   padding: 0 34rpx;
   text-align: left;
-  text-indent: 40rpx;
+  text-indent: 26rpx;
 }
 .content-sub.book-info{
   padding: 0 24rpx;
@@ -76,6 +76,10 @@
   padding: 14rpx 24rpx;
   display: flex;
   justify-content: space-between;
+}
+.btns{
+  display: flex;
+
 }
 .input{
   border: 1px solid #000;
@@ -158,4 +162,13 @@ v-tag:nth-child(2)>view{
   color: #adadad;
   font-size: 18rpx;
   margin-left: 16rpx;
+}
+.share-btn{
+  margin-left: 10rpx;
+  width: 40rpx;
+  height: 42rpx;
+}
+.icon-share{
+  width: 40rpx;
+  height: 40rpx;
 }

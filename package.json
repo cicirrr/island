@@ -1,0 +1,22 @@
+{
+  "name": "island",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cicirrr/island.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cicirrr/island/issues"
+  },
+  "homepage": "https://github.com/cicirrr/island#readme",
+  "dependencies": {
+    "js-base64": "^2.5.2"
+  }
+}

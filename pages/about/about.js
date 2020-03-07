@@ -1,51 +1,20 @@
-import {
-  BookModule
-} from '../../modules/book_module'
-const bookModule = new BookModule()
-// pages/book/book.js
+// pages/about/about.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    hotBook: [],
-    searching: false,
-    loading: ''
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this._getHotBookList()
-  },
-  openSearch(event){
-    this.setData({
-      searching: true
-    })
-  },
-  onCancel(event){
-    this.setData({
-      searching: false
-    })
-   
-  },
-  onReachBottom(){
-    const loading = Math.random().toString(36).substr(2,4)
 
-    
-    this.setData({
-      loading,
-    })
   },
-  _getHotBookList(){
-    bookModule.getHotBookList().then(res => {
-      this.setData({
-        hotBook: res.books
-      })
-    })
-  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -81,7 +50,12 @@ Page({
 
   },
 
-  
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
 
   /**
    * 用户点击右上角分享

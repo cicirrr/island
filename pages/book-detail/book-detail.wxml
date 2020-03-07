@@ -55,12 +55,17 @@
         <image class="icon" src="/images/icon/comment.png"></image>
         <text class="txt">留下你的短评～</text>
       </view>
-      <v-like likeCount="{{likeCount}}" likeStatus="{{likeStatus}}"></v-like>
+      <view class="btns">
+        <v-like likeCount="{{likeCount}}" likeStatus="{{likeStatus}}" bind:toggleLike="onTapLike"/>
+        <v-share open-type="share" class="share-btn">
+          <image class="icon-share" src="/images/icon/share.png" slot="img"/>
+        </v-share>
+      </view>
     </view>
-    
-    
+
+
   </view>
-  <view class="hide-box border-top" wx:if="{{inputing}}" >
+  <view class="hide-box border-top" wx:if="{{inputing}}">
     <view class="row1 border-bottom">
       <text class="tip">仅可点击标签+1</text>
       <text class="cancel" bind:tap="onCancel">取消</text>
@@ -73,8 +78,9 @@
         </v-tag>
       </block>
     </view>
-    <input placeholder="短评最多12个字" class="input-box" bindconfirm="onPosting" focus="true" maxlenght="12" value="{{content}}"/>
+    <input placeholder="短评最多12个字" class="input-box" bindconfirm="onPosting" focus="true" maxlenght="12"
+      value="{{content}}" />
   </view>
-  
+
 </view>
 <v-mask wx:if="{{inputing}}" bind:tap="onCancel"></v-mask>

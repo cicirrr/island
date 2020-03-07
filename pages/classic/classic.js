@@ -46,6 +46,7 @@ Component({
         this.setData({
           classic: res
         })
+        //console.log(res)
         this._updateLike(res)
       })
     
@@ -56,6 +57,7 @@ Component({
       this.setData({
         classic: res
       })
+      //console.log(this.data.classic)
       this._updateLike(res)
     })
   },
@@ -68,8 +70,10 @@ Component({
   nextOrPrevious(event) {
 
     const step = event.detail
-  
     const index = this.data.classic.index
+    if((this.data.first && step == 'previous') || this.data.latest && step == 'next'){
+      return
+    }
     classicModule.goPreviousOrNext(index, step).then(res => {
       this.setData({
         classic: res,

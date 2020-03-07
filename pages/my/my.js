@@ -66,12 +66,18 @@ Page({
     this._setAuthorized()
   },
   goDetail(event){
-    console.log(event)
+    
     const cid = event.detail.cid
     const ctype = event.detail.ctype
     wx.navigateTo({
         url: `/pages/classic-detail/classic-detail?cid=${cid}&ctype=${ctype}`
       })
+  },
+  jumpToAbout(event){
+    console.log(event)
+    wx.navigateTo({
+      url: '/pages/about/about',
+    })
   },
   
   _setAuthorized(){
